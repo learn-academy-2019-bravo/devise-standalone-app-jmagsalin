@@ -1,0 +1,37 @@
+<%= form_with(model: skate, local: true) do |form| %>
+  <% if skate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(skate.errors.count, "error") %> prohibited this skate from being saved:</h2>
+
+      <ul>
+      <% skate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :deck_brand %>
+    <%= form.text_field :deck_brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trucks_brand %>
+    <%= form.text_field :trucks_brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :model_year %>
+    <%= form.number_field :model_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

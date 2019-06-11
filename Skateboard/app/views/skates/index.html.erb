@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Skates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Deck brand</th>
+      <th>Trucks brand</th>
+      <th>Model year</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skates.each do |skate| %>
+      <tr>
+        <td><%= skate.deck_brand %></td>
+        <td><%= skate.trucks_brand %></td>
+        <td><%= skate.model_year %></td>
+        <td><%= skate.user_id %></td>
+        <td><%= link_to 'Show', skate %></td>
+        <td><%= link_to 'Edit', edit_skate_path(skate) %></td>
+        <td><%= link_to 'Destroy', skate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skate', new_skate_path %>

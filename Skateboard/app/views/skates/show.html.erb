@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deck brand:</strong>
+  <%= @skate.deck_brand %>
+</p>
+
+<p>
+  <strong>Trucks brand:</strong>
+  <%= @skate.trucks_brand %>
+</p>
+
+<p>
+  <strong>Model year:</strong>
+  <%= @skate.model_year %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @skate.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_skate_path(@skate) %> |
+<%= link_to 'Back', skates_path %>
